@@ -1,14 +1,17 @@
-#include<stdio.h>
+#include <stdio.h>
+#include "../uint8192.h"
+
 int main()
 {
+    char buf[2048]; // 8 * 2048 = 8192 bytes
+    uint8192_t f;
     unsigned int number;
     printf("Enter a positive integer: ");
     scanf("%u", &number);
-    while (number>0)
-    {
-        number=number*(number-1);
-        number--;
-    }
-    printf("Factorial = %u", number);
+    if (number > 966) fprintf(stderr, "overflow\n");
+    uint8192_factorial(&f, number);
+    uint8192_to_decimal(&f, buf, sizeof buf);
+
+    printf("Factorial = %s", buf);
     return 0;
 }
