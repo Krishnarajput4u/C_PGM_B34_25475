@@ -1,0 +1,1 @@
+The code doesn't accept 999 as input . It causes the the programme to end.
