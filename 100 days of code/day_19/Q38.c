@@ -24,9 +24,9 @@ int main() {
     temp = num;
 
     while (temp > 0) {
-        rem = temp % 10;   // get last digit
-        sum += rem;        // add to sum
-        temp /= 10;        // remove last digit
+        rem = temp % 10;
+        sum += rem;
+        temp /= 10;
     }
 
     printf("The sum of digits is : %d\n", sum);
