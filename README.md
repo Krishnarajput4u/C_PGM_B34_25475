@@ -42,7 +42,7 @@ Here you’ll find wild creatures called **codes** written by a beginner (that�
 
 ## 🤝 Contributions
 
-Feel free to suggest better ways to code 
+* Feel free to suggest better ways to code 
 ---
 
 ## 📝 Note from Me
