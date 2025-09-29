@@ -42,9 +42,7 @@ Here you’ll find wild creatures called **codes** written by a beginner (that�
 
 ## 🤝 Contributions
 
-Feel free to suggest better ways to code (I promise I won’t cry… much).
-Pull requests are welcome—just don’t roast me too hard 🥲.
-
+Feel free to suggest better ways to code 
 ---
 
 ## 📝 Note from Me
