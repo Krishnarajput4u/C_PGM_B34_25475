@@ -3,18 +3,19 @@ int main(){
     int num;
     printf("Enter a number: ");
     scanf("%d",&num);
-    for(int pivot=1;pivot<num;++pivot){
-        int sum1=0,sum2=0;
-        for(int j=1;j<=pivot;++j){
-            sum1+=j;
-        }
-        for(int j=pivot;j<=num;++j){
-            sum2+=j;
-        }
-        if(sum1==sum2){
-            printf("Pivot is %d\n",pivot);
+    int total_sum=num*(num+1)/2;
+    int left=0;
+    if(num==1){
+        printf("1");
+        return 0;
+    }
+    for(int i=1;i<=num;++i){
+        left+=i;
+        int right=total_sum - left+i;
+        if(right==left){
+            printf("The pivot Integer is %d",i);
             return 0;
         }
     }
-    printf("Not a pivot number ");
+    printf("-1");
 }
