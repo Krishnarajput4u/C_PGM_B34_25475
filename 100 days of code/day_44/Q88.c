@@ -14,7 +14,6 @@ hello-world
 int main() {
     char text[50];
     int i = 0;
-    int space = 0, digit = 0, special = 0;
 
     printf("Enter the text: \n");
 
