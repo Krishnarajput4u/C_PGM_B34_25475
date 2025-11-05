@@ -1,16 +1,18 @@
 #include<stdio.h>
 
+int GCD(int a, int b) {
+    if (b == 0)
+        return a;
+    else
+        return GCD(b, a % b);
+}
+
+
 int main(){
     int num1;printf("Enter the first number : "); scanf("%d",&num1);
     int num2; printf("Enter the second number : "); scanf("%d",&num2);
-    int gcd,limit;
-    if(num1>num2)
-        limit=num2;
-    else
-        limit=num1;
-    for(int i=1;i<=limit;i++){
-        if(num1%i==0 && num2%i==0)
-            gcd=i;
-    }
+    GCD(num1,num2);
+    int gcd = GCD(num1,num2);
     printf("%d",gcd);
+    return 0;
 }
