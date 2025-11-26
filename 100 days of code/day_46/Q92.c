@@ -9,24 +9,34 @@ s
 
 */
 #include <stdio.h>
-#include<string.h>
-#include<ctype.h>
+#include <string.h>
+#include <ctype.h>
 
-int main(){
+int main() {
     char text[50];
-    
-    printf("Enter the text : ");
-    fgets(text,sizeof(text),stdin);
-    
-    text[strcspn(text,"\n")]='\0';
-    
-    for(int i=0;text[i]!='\0';i++){
+    int freq[26] = {0};
 
-        if(islower(text[i])){
-            printf("\"%c\" is the first lower cased alphabet in the string",text[i]);
-            break;
+    printf("Enter the text : ");
+    fgets(text, sizeof(text), stdin);
+
+    text[strcspn(text, "\n")] = '\0';
+
+    // Count occurrences
+    for (int i = 0; text[i] != '\0'; i++) {
+        if (islower(text[i])) {
+            freq[text[i] - 'a']++;
         }
-        
     }
+
+    // Find first repeating lowercase character
+    for (int i = 0; text[i] != '\0'; i++) {
+        if (islower(text[i]) && freq[text[i] - 'a'] > 1) {
+            printf("%c\n", text[i]);
+            return 0;
+        }
+    }
+
+    // If no repeating lowercase found
+    printf("No repeating lowercase alphabet found\n");
     return 0;
 }
