@@ -20,7 +20,7 @@ void clearMap() {
 void draw() {
     system("cls");
 
-    printf("========== CAR RACING ==========\n");
+    printf("========== Rush Road ==========\n");
     printf("  Use A / D to move | Score: %d\n", score);
     printf("================================\n\n");
 
