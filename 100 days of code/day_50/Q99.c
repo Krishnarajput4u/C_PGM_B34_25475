@@ -2,18 +2,32 @@
 #include <string.h>
 
 int main() {
-    char s[100];
-    fgets(s, sizeof(s), stdin);
+    char date[15];
+    scanf("%s", date);   // input format: dd/mm/yyyy
 
-    // Print first character (first initial)
-    if (s[0] != ' ')
-        printf("%c.", s[0]);
+    // Extract day, month, year
+    char day[3], month[3], year[5];
 
-    // Print initials after every space
-    for (int i = 1; s[i] != '\0'; i++) {
-        if (s[i-1] == ' ' && s[i] != ' ' && s[i] != '\n')
-            printf("%c.", s[i]);
-    }
+    strncpy(day, date, 2);
+    day[2] = '\0';
+
+    strncpy(month, date + 3, 2);
+    month[2] = '\0';
+
+    strncpy(year, date + 6, 4);
+    year[4] = '\0';
+
+    // Month abbreviations
+    const char *months[] = {
+        "Jan","Feb","Mar","Apr","May","Jun",
+        "Jul","Aug","Sep","Oct","Nov","Dec"
+    };
+
+    // Convert month string "01"→0, "02"→1, ... "12"→11
+    int m = (month[0]-'0') * 10 + (month[1]-'0') - 1;
+
+    // Print final result
+    printf("%s-%s-%s", day, months[m], year);
 
     return 0;
 }
