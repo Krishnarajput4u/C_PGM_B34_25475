@@ -1,0 +1,31 @@
+# Compiled executables
+*.exe
+*.out
+*.o
+*.obj
+
+# Build artifacts
+*.a
+*.lib
+*.so
+*.dll
+
+# IDE and editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test output files
+*.test
+*.log
+
+# Personal data files (if any)
+personal_info.txt
+students.dat

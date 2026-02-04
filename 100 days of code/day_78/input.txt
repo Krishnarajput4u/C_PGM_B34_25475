@@ -1,4 +1,0 @@
-Name: Krishna
-Age: 18
-
-hello

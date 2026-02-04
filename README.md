@@ -51,3 +51,9 @@ Every programmer’s journey begins with a **semicolon error**.
 This is mine 🚀.
 
 ---
+
+## ⚠️ Privacy Notice
+
+This repository contains personal learning materials and academic coursework. 
+Compiled executables and files with personal information have been excluded from version control.
+
